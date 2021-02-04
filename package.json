@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose --collectCoverage",
     "start": "node server/index.js",
-    "watch": "webpack",
+    "watch": "webpack -w",
     "seed": "node database/seed.js"
   },
   "repository": {
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Chill-Crocs/ratings-service#readme",
   "dependencies": {
     "aws-sdk": "^2.834.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "css-loader": "^5.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
