@@ -1,17 +1,14 @@
-\c postgres;
 
 DROP SCHEMA IF EXISTS sdc CASCADE;
 
 CREATE SCHEMA sdc
 
 CREATE TABLE sdc.shop(
-  _id INT NOT NULL PRIMARY KEY,
-  total INT,
-  average INT
+  _id INT NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE sdc.shopreviews(
-  recordId SERIAL PRIMARY KEY,
+  recordid SERIAL PRIMARY KEY,
   _id INT,
   avatar VARCHAR(200) NOT NULL,
   name VARCHAR(200) NOT NULL,
