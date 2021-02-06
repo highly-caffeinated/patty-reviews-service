@@ -1,3 +1,4 @@
+\c postgres;
 
 DROP SCHEMA IF EXISTS sdc CASCADE;
 
