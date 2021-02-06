@@ -7,9 +7,9 @@ ws.on('error', (err) => {console.log('write error!', err)});
 ws.write(' _id, avatar, name, date, rating, description, imageURL, reccommend, purchasedItem, shopImage', 'utf-8');
 // Declare your columns name here, you can add more than two!
 // const records = [' _id, avatar, name, date, rating, description, imageURL, reccommend, purchasedItem, shopImage'];
-for (let i = 1; i <= 1000000000; i += 1) {
+for (let i = 1; i <= 10000000; i += 1) {
   // Enter your record here
-  const numOfRecs = 1000000000;
+  const recordCount = 10000000;
   const _id = Math.floor(Math.random() * 1001);
   const avatar = `https://fecetsypictures.s3.amazonaws.com/image${Math.floor(Math.random() * 1001)}.jpg`;
   const name = faker.name.firstName();
