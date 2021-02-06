@@ -7,10 +7,11 @@ ws.on('error', (err) => {console.log('write error!', err)});
 ws.write(' _id, avatar, name, date, rating, description, imageURL, reccommend, purchasedItem, shopImage', 'utf-8');
 // Declare your columns name here, you can add more than two!
 // const records = [' _id, avatar, name, date, rating, description, imageURL, reccommend, purchasedItem, shopImage'];
-for (let i = 1; i <= 10000000; i += 1) {
+for (let i = 0; i <= 10000; i += 1) {
   // Enter your record here
-  const recordCount = 10000000;
-  const _id = Math.floor(Math.random() * 1001);
+  const recordCount = 10000;
+  // const _id = Math.floor(Math.random() * 1001); for random num 0-1000
+  const _id = Math.floor(Math.random() * (10000 -1) + 1);
   const avatar = `https://fecetsypictures.s3.amazonaws.com/image${Math.floor(Math.random() * 1001)}.jpg`;
   const name = faker.name.firstName();
   const date = faker.date.past();
@@ -18,7 +19,7 @@ for (let i = 1; i <= 10000000; i += 1) {
   const description = faker.lorem.paragraph();
   const imageURL = `https://fecetsypictures.s3.amazonaws.com/image${Math.floor(Math.random() * 1001)}.jpg`;
   const reccommend = faker.random.number({ min: 1, max: 500 });
-  const purchasedItem = `${faker.random.words(7)}...`;
+  const purchasedItem = `${faker.commerce.productName()}`;
   const shopImage = `https://fecetsypictures.s3.amazonaws.com/image${Math.floor(Math.random() * 1001)}.jpg`;
   // Format your record with template lit,   seperates it with comma
   const record = `${_id}, ${avatar}, ${name}, ${date}, ${rating}, ${description}, ${imageURL}, ${reccommend}, ${purchasedItem}, ${shopImage}`;

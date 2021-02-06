@@ -15,7 +15,7 @@ CREATE TABLE sdc.shopreviews(
   name VARCHAR(200) NOT NULL,
   date VARCHAR(200) NOT NULL,
   rating SMALLINT NOT NULL,
-  description VARCHAR(300) NOT NULL,
+  description VARCHAR(500) NOT NULL,
   imageURL VARCHAR(200) NOT NULL,
   reccommend SMALLINT NOT NULL,
   purchasedItem VARCHAR(200) NOT NULL,
