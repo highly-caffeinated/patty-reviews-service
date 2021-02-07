@@ -4,9 +4,9 @@ DROP SCHEMA IF EXISTS sdc CASCADE;
 
 CREATE SCHEMA sdc
 
-CREATE TABLE sdc.shop(
-  _id INT NOT NULL PRIMARY KEY
-);
+-- CREATE TABLE sdc.shop(
+--   _id INT NOT NULL PRIMARY KEY
+-- );
 
 CREATE TABLE sdc.shopreviews(
   recordid SERIAL PRIMARY KEY,
@@ -19,8 +19,10 @@ CREATE TABLE sdc.shopreviews(
   imageURL VARCHAR(200) NOT NULL,
   reccommend SMALLINT NOT NULL,
   purchasedItem VARCHAR(200) NOT NULL,
-  shopImage VARCHAR(200) NOT NULL,
-  CONSTRAINT fk_shopreviews
-    FOREIGN KEY (_id)
-    REFERENCES sdc.shop(_id)
+  shopImage VARCHAR(200) NOT NULL
+  -- CONSTRAINT fk_shopreviews
+  --   FOREIGN KEY (_id)
+  --   REFERENCES sdc.shop(_id)
 );
+
+-- create index idx_reviewId on sdc.shopreviews(_id);

@@ -10,7 +10,7 @@
     "seed": "node database/seed.js",
     "dbsetup": "psql < postgres_schema.sql",
     "seed1": "node postgresSeedShop.js",
-    "seed2": "node postgresSeedShopReviews.js",
+    "seed2": "node seedReviews.js",
     "dbcsv": "psql < csvLoader.sql"
   },
   "repository": {
