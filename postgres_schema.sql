@@ -25,4 +25,4 @@ CREATE TABLE sdc.shopreviews(
   --   REFERENCES sdc.shop(_id)
 );
 
--- create index idx_reviewId on sdc.shopreviews(_id);
+create index idx_reviewId on sdc.shopreviews(_id);
