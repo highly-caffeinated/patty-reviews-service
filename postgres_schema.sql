@@ -1,11 +1,12 @@
+\c postgres;
 
 DROP SCHEMA IF EXISTS sdc CASCADE;
 
 CREATE SCHEMA sdc
 
-CREATE TABLE sdc.shop(
-  _id INT NOT NULL PRIMARY KEY
-);
+-- CREATE TABLE sdc.shop(
+--   _id INT NOT NULL PRIMARY KEY
+-- );
 
 CREATE TABLE sdc.shopreviews(
   recordid SERIAL PRIMARY KEY,
@@ -14,12 +15,14 @@ CREATE TABLE sdc.shopreviews(
   name VARCHAR(200) NOT NULL,
   date VARCHAR(200) NOT NULL,
   rating SMALLINT NOT NULL,
-  description VARCHAR(300) NOT NULL,
+  description VARCHAR(500) NOT NULL,
   imageURL VARCHAR(200) NOT NULL,
   reccommend SMALLINT NOT NULL,
   purchasedItem VARCHAR(200) NOT NULL,
-  shopImage VARCHAR(200) NOT NULL,
-  CONSTRAINT fk_shopreviews
-    FOREIGN KEY (_id)
-    REFERENCES sdc.shop(_id)
+  shopImage VARCHAR(200) NOT NULL
+  -- CONSTRAINT fk_shopreviews
+  --   FOREIGN KEY (_id)
+  --   REFERENCES sdc.shop(_id)
 );
+
+create index idx_reviewId on sdc.shopreviews(_id);
