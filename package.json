@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose --collectCoverage",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "watch": "webpack -w",
     "seed": "node database/seed.js",
     "dbsetup": "psql < postgres_schema.sql",
@@ -61,6 +61,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest-enzyme": "^7.1.2",
     "parcel-bundler": "^1.12.4",
+    "pg": "^8.5.1",
     "sinon": "^9.2.3",
     "webpack": "^5.14.0",
     "webpack-cli": "^4.3.1"
