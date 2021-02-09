@@ -7,11 +7,9 @@
     "test": "jest --verbose --collectCoverage",
     "start": "nodemon server/index.js",
     "watch": "webpack -w",
-    "seed": "node database/seed.js",
-    "dbsetup": "psql < postgres_schema.sql",
-    "seed1": "node postgresSeedShop.js",
-    "seed2": "node seedReviews.js",
-    "dbcsv": "psql < csvLoader.sql"
+    "dbsetup": "psql < database/postgres_schema.sql",
+    "seed": "node database/seedReviews.js",
+    "dbcsv": "psql < database/csvLoader.sql"
   },
   "repository": {
     "type": "git",
