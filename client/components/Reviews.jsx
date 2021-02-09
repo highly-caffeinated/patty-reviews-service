@@ -41,7 +41,7 @@ class Reviews extends Component {
   }
 
   getReviews() {
-    const randomNum = Math.floor(Math.random() * (30 - 15 + 1) + 15);
+    const randomNum = Math.floor(Math.random() * (10000000 - 1) + 1);
 
     axios.get(`/api/reviews/${randomNum}`)
       .then((response) => {
