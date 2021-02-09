@@ -4,3 +4,4 @@ CSV
 .DS_Store
 ./public/reviews.js
 ./server/newrelic.js
+newrelic_agent.log

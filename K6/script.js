@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { check } from 'k6';
+import { sleep } from 'k6';
 
 export const options = {
   scenarios: {
@@ -23,4 +24,5 @@ export default function () {
     'no errors returned': (r) => !r.error,
     'all status code 200': (r) => r.status === 200
   });
+  sleep(0);
 }
