@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose --collectCoverage",
     "start": "node server/index.js",
-    "start -w": "nodemon server/index.js",
+    "mon": "nodemon server/index.js",
     "watch": "webpack -w",
     "dbsetup": "psql < database/postgres_schema.sql",
     "seed": "node database/seedReviews.js",
@@ -53,6 +53,7 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "dotenv": "^8.2.0",
     "enzyme-to-json": "^3.6.1",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",

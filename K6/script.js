@@ -1,6 +1,28 @@
 import http from 'k6/http';
+import { check } from 'k6';
 import { sleep } from 'k6';
+
+export const options = {
+  scenarios: {
+    reviews_request: {
+      executor: 'constant-arrival-rate',
+      rate: 1000,
+      duration: '1m',
+      preAllocatedVUs: 80,
+      maxVUs: 100,
+    },
+  },
+};
+
+
 export default function () {
-  http.get('http://test.k6.io');
-  sleep(1);
+
+  let res = http.get(`http://localhost:3002/api/reviews/${Math.floor(Math.random() * 10000000) + 1}`);
+
+  check(res, {
+    '<2s to completion': (r) => r.timings.duration < 2000,
+    'no errors returned': (r) => !r.error,
+    'all status code 200': (r) => r.status === 200
+  });
+  sleep(0);
 }

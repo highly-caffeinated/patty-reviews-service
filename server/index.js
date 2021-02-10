@@ -6,11 +6,6 @@ const pool = require('../database/queries.js');
 const app = express();
 const port = 3002;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.use(express.static('public'));
-
 // app.use('/', (req, res, next) => {
 //   console.log(`Now handling ${req.method} from ${req.path}`);
 //   next();
@@ -51,6 +46,11 @@ app.get('/api/reviews/:id', (req, res) => {
     }
   })
 });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
