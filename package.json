@@ -7,7 +7,7 @@
     "test": "jest --verbose --collectCoverage",
     "start": "node server/index.js",
     "mon": "nodemon server/index.js",
-    "watch": "webpack -w",
+    "watch": "webpack",
     "dbsetup": "psql < database/postgres_schema.sql",
     "seed": "node database/seedReviews.js",
     "dbcsv": "psql < database/csvLoader.sql",
