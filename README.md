@@ -1,6 +1,6 @@
 # Reviews Service 
 
-I recieved this legacy codebase that contained the front end for a reviews service and I was tasked with redesigning and scaling the back end for this service and deploying it using AWS platform service.
+I received this legacy codebase that contained the front end for a reviews service and I was tasked with redesigning and scaling the back end for this service and deploying it using AWS platform service.
 
 I used Postgres as the database and seeded it with 71 million records to mimic that amount of data that a review service would need to handle.  This benchmark was taken with the database still running on localhost.  Afterwards, I delpoyed the database to its own AWS EC2 instance.
 
